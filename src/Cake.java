@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Cake extends Item{
+class Cake extends Item {
     Scanner scan = new Scanner(System.in);
 
     int flavor;
@@ -8,8 +8,8 @@ class Cake extends Item{
     int[] flavours_price = { 500, 300, 400, 900 };
 
     void chooseFlavor() {
-        System.out.println("Choose your flavor: \n 1. Chocolate\n 2. Vanilla \n 3. Strawberry \n 4. Sunberry");
-         flavor = scan.nextInt();
+        System.out.println("Choose your flavor: \n 1. Chocolate\n 2. Vanilla \n 3. Strawberry\n");
+        flavor = scan.nextInt();
     }
 
     void type() {
@@ -21,17 +21,19 @@ class Cake extends Item{
         chooseFlavor();
         type();
         if (type == 1) {
-            this.price = 500;
+            this.price = flavours_price[flavor - 1];
         } else if (type == 2) {
             System.out.println("How many pieces? ");
             int qty = scan.nextInt();
-            this.price = 110 * qty;
-            System.out.println(qty+"pieces added! ");
+            if (flavor == 1)
+                this.price += 200;
+            else if (flavor == 2)
+                this.price += 100;
+            else if (flavor == 3)
+                this.price += 150;
+            this.price = this.price * qty;
+            System.out.println(qty + " pieces added! ");
         }
-        if  (flavor ==1) this.price += 200;
-        else if (flavor ==2) this.price += 100;
-        else if (flavor ==3) this.price += 150;
-
 
     }
 }

@@ -3,12 +3,12 @@ import java.util.Scanner;
 class Coffee extends Item {
 
     Scanner scan = new Scanner(System.in);
-
+    int baseCoffee = 100;
     int extraCreamPrice = 110;
     int customLatteArtPrice = 70;
 
     void buildCoffee() {
-
+        this.price = baseCoffee;
         System.out.println("Do you want extra cream? (Y/N) ");
         String cream = scan.next();
         String yes = "Yyes";
@@ -30,10 +30,12 @@ class Coffee extends Item {
     }
 
     void addExtraCream(boolean ch1) {
-        this.price += extraCreamPrice;
+        if (ch1)
+            this.price += extraCreamPrice;
     }
 
     void addCustomLatteArt(boolean ch2) {
-        this.price += customLatteArtPrice;
+        if (ch2)
+            this.price += customLatteArtPrice;
     }
 }
