@@ -20,14 +20,12 @@ public class Order {
                 Cake cake = new Cake();
                 cake.buildCake();
                 totalBill += cake.getPrice();
-                // System.out.println("Total price: " + cake.getPrice());
 
             }
             if (choice == 2) {
                 Coffee coffee = new Coffee();
                 coffee.buildCoffee();
                 totalBill += coffee.getPrice();
-                // System.out.println("Total price: " + coffee.getPrice());
             }
             System.out.println("The price so far: " + totalBill);
             System.out.println("Do you want to add more?( (Y/N) ");

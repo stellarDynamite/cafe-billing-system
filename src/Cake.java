@@ -26,6 +26,7 @@ class Cake extends Item{
             System.out.println("How many pieces? ");
             int qty = scan.nextInt();
             this.price = 110 * qty;
+            System.out.println(qty+"pieces added! ");
         }
         if  (flavor ==1) this.price += 200;
         else if (flavor ==2) this.price += 100;
