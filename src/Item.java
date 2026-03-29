@@ -1,5 +1,5 @@
 public class Item {
-    protected int price ; // protected makes it accessible only to child classes
+    protected int price ; 
     public int getPrice(){
         return price;
     }

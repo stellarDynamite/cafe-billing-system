@@ -13,15 +13,17 @@ class Coffee extends Item {
         String cream = scan.next();
         String yes = "Yyes";
         boolean ch1, ch2;
-        if (yes.contains(cream))
+        if (yes.contains(cream)) {
             ch1 = true;
-        else
+            System.out.println("Extra cream added! ");
+        } else
             ch1 = false;
         System.out.println("Do you want custom Latte Art? (Y/N) ");
         String art = scan.next();
-        if (yes.contains(art))
+        if (yes.contains(art)) {
             ch2 = true;
-        else
+            System.out.println("Custom Latte Art added!");
+        } else
             ch2 = false;
         addExtraCream(ch1);
         addCustomLatteArt(ch2);
