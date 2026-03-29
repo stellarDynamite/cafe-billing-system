@@ -21,15 +21,14 @@ It allows users to order multiple items (Cake & Coffee), customize selections, a
 ---
 
 ## 📁 Project Structure
-.src
-
-├── Cafe.java        # Main entry point (runs the program)  
-├── Order.java       # Handles menu, user input, and billing logic  
-├── Item.java        # Base class for items (price handling)  
-├── Cake.java        # Cake-related logic and pricing  
-├── Coffee.java      # Coffee-related logic and customization  
-├── flavor.java      # Handles flavor selection (if used)  
-└── README.md  
+.
+├── src/
+│ ├── Cafe.java # Main entry point (runs the program)
+│ ├── Order.java # Handles menu, user input, and billing logic
+│ ├── Item.java # Base class for items (price handling)
+│ ├── Cake.java # Cake-related logic and pricing
+│ └── Coffee.java # Coffee-related logic and customization
+└── README.md
 
 ---
 
